@@ -14,7 +14,6 @@ let getComputerChoice = () => {
 }
 
 let playRound = (playerchoice, computer) => {
-    console.log(playerChoice);
     playerChoice.toLowerCase()
     let player = 0;
     playerchoice == "rock" ?
@@ -36,6 +35,7 @@ let game = (playerChoice, computerChoice) => {
     for (let n = 0; n < 5; n++) {
         if (n > 0) {
             computerChoice = getComputerChoice();
+            playerChoice = prompt("Select Rock, Paper or Scissors");
         }
         let winner = playRound(playerChoice, computerChoice);
         console.log(winner);
@@ -44,9 +44,9 @@ let game = (playerChoice, computerChoice) => {
         compWins++ : console.log("No points");
     }
     return (playerWins === compWins) ? "Draw, play again!" : playerWins < compWins ? 
-    "You lost. Computer wins a total amount of " + compWins.toString() : "You won. You have won a total amount of " + playerWins.toString
+    "You lost. Computer wins a total amount of " + compWins.toString() : "You won. You have won a total amount of " + playerWins.toString()
 }
 
-let playerChoice = prompt("Select Rock, Paper or Scissors", )
+let playerChoice = prompt("Select Rock, Paper or Scissors")
 let computerChoice = getComputerChoice();
 console.log(game(playerChoice, computerChoice));

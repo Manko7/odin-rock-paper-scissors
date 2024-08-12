@@ -1,4 +1,4 @@
-
+let choice = 0
 
 /*  Rock = 0
     Paper = 1
@@ -6,10 +6,7 @@
 */
 
 let getComputerChoice = () => {
-    let choice = Math.floor(Math.random() * 3)
-    choice === 0 ? 
-    console.log("Computer chooses Rock") : (choice === 1) ?
-    console.log("Computer chooses Paper") : console.log("Computer chooses Scissors");
+    choice = Math.floor(Math.random() * 3)
     return choice
 }
 
@@ -19,6 +16,11 @@ let playRound = (playerchoice, computer) => {
     playerchoice == "rock" ?
     player = 0 : playerchoice == "paper" ?
     player = 1 : player = 2;
+
+    choice === 0 ? 
+    console.log("Computer chooses Rock") : (choice === 1) ?
+    console.log("Computer chooses Paper") : console.log("Computer chooses Scissors");
+    
 
     return (player === computer) ? 
     "Draw, play again" : player === 0 && computer === 1 ?
